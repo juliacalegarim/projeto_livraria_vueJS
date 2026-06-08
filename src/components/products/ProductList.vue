@@ -1,12 +1,48 @@
 <script setup>
-// Este arquivo é um componente Vue que permitirá listar os livros disponíveis para compra. Ele exibirá uma grade de produtos, onde cada produto será representado por um componente ProductCard.vue. O componente ProductList.vue será responsável por buscar os dados dos livros (que estão armazenados em um arquivo JS local - /src/data/products.js). Ele usará um loop para renderizar um ProductCard para cada livro na lista, passando as informações do livro como props para o componente ProductCard. O ProductList.vue é projetado para ser usado na página de listagem de produtos, onde os usuários podem navegar pelos livros disponíveis e clicar em um produto para ver mais detalhes ou adicioná-lo ao carrinho de compras.
+import { produtos } from '@/data/product'
+import ProductCard from './ProductCard.vue'
+import { addCarrinho } from '@/utils/cartUtils'
 
+function handleAddToCart(produto) {
+  addCarrinho(produto.id, 1)
+  alert(`"${produto.titulo}" adicionado ao carrinho!`)
+}
 </script>
 
 <template>
-
+  <section class="product-list-section">
+    <h2 class="section-title">Lançamentos</h2>
+    <div class="product-grid">
+      <ProductCard
+        v-for="produto in produtos"
+        :key="produto.id"
+        :produto="produto"
+        @addToCart="handleAddToCart"
+      />
+    </div>
+  </section>
 </template>
 
 <style scoped>
+.product-list-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
 
+.section-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #00b300;
+  display: inline-block;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
 </style>
