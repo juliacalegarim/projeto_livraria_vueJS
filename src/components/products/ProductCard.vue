@@ -13,7 +13,6 @@ const { produto } = defineProps({
 
 const onAddCarrinho = inject('onAddCarrinho')
 </script>
-
 <template>
   <div class="product-card">
     <div class="product-card__cover-wrap">
