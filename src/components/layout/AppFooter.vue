@@ -2,6 +2,7 @@
 import { RouterLink } from 'vue-router'
 </script>
 
+
 <template>
   <footer class="footer">
     <div class="footer__inner">
@@ -51,6 +52,7 @@ import { RouterLink } from 'vue-router'
     </div>
   </footer>
 </template>
+
 
 <style scoped>
 .footer {

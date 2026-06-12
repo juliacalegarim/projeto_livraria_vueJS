@@ -390,7 +390,7 @@ const destaques = produtos.slice(0, 4)
   border-top: 1px solid rgba(255,255,255,0.15);
   opacity: 0.7;
 }
-</style>
+
 .home__hero-btn:hover {
   background: #27ae60;
   color: #fff;
@@ -450,3 +450,4 @@ const destaques = produtos.slice(0, 4)
   .home__hero-title { font-size: 1.5rem; }
 }
 </style>
+
