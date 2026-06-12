@@ -1,4 +1,6 @@
 <script setup>
+// Este arquivo é um componente Vue que representa o último resumo do carrinho de compras, exibindo o total geral e um botão para finalizar a compra.
+
 import { inject, computed } from 'vue'
 import { formataPreco } from '@/utils/currencyUtils'
 
@@ -165,3 +167,4 @@ const freteGratis = computed(() => cartTotal.value >= FRETE_GRATIS_ACIMA)
   flex-wrap: wrap;
 }
 </style>
+
