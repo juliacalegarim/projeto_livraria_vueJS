@@ -17,7 +17,7 @@ const destaques = produtos.slice(0, 4)
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-content">
-          <span class="hero-badge">Livi Destaque</span>
+          <span class="hero-badge">Livro Destaque</span>
           <h1 class="hero-title">Cem anos de solidão</h1>
           <p class="hero-desc">
             Neste clássico de Gabriel García Márquez, conhece-se
@@ -390,7 +390,7 @@ const destaques = produtos.slice(0, 4)
   border-top: 1px solid rgba(255,255,255,0.15);
   opacity: 0.7;
 }
-</style>
+
 .home__hero-btn:hover {
   background: #27ae60;
   color: #fff;
