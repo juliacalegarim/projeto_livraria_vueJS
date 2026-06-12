@@ -23,7 +23,10 @@ const router = createRouter({
       name: 'cart',
       component: CartPanel,
     },
+    
   ],
 })
 
 export default router
+
+
